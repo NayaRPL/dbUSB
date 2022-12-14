@@ -190,6 +190,26 @@ retail=# select * from transaksi;
 (15 rows)
 
 
+retail=# select  id_beli,id_cust,kode_barang, total_barang,total_jual,total_jual/total_barang AS harga_satun from transaksi;
+ id_beli | id_cust | kode_barang | total_barang | total_jual | harga_satun
+---------+---------+-------------+--------------+------------+-------------
+ TR1     |       1 | DD2         |            2 |      10000 |        5000
+ TR3     |       1 | DD1         |            1 |      25000 |       25000
+ TR2     |       2 | DD14        |            2 |      10000 |        5000
+ TR4     |       3 | DD3         |            1 |       5000 |        5000
+ TR5     |       9 | DD6         |            2 |      10000 |        5000
+ TR6     |       6 | DD2         |            2 |      10000 |        5000
+ TR7     |       2 | DD1         |            1 |      25000 |       25000
+ TR8     |       1 | DD8         |            1 |      25000 |       25000
+ TR9     |       2 | DD3         |            1 |       5000 |        5000
+ TR10    |       4 | DD6         |            2 |      10000 |        5000
+ TR111   |       8 | DD2         |            2 |      10000 |        5000
+ TR13    |       8 | DD1         |            1 |      25000 |       25000
+ TR12    |       4 | DD14        |            5 |      10000 |        2000
+ TR14    |       7 | DD3         |            1 |       5000 |        5000
+ TR15    |       8 | DD3         |            2 |      10000 |        5000
+(15 rows)
+
 retail=# select * from barang;
  kode_barang |  nama_barang   | stok_barang | harga_jual | harga_beli
 -------------+----------------+-------------+------------+------------
